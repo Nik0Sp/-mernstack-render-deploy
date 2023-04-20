@@ -30,7 +30,7 @@ mongoose.connect(mongo_URI,{ dbName:process.env.DB_NAME})
  const __dirname = path.dirname(__filename);
 
 
-
+//für build frontend 
 app.use(express.static(path.join(__dirname, "../client/build")));
 app.get('*',(req,res)=>{
   res.sendFile(path.join(__dirname + "/../client/build/index.html"))
